@@ -10,7 +10,7 @@ const blogList = [
     link: "",
   },
   {
-    thumbnail: "../img/BlogImage3.jpg",
+    thumbnail: "/img/BlogImage3.jpg",
     title: "Lorem ipsum dolor sit amet adipisicing elit.",
     link: "",
   },
