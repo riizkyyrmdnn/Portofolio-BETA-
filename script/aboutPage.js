@@ -1,5 +1,5 @@
 const aboutPageList = {
-  image: "../img/Profile512.png",
+  image: "img/Profile512.png",
   title: "hello i'm john",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque labore aliquam assumenda porro facere iure officia neque earum repudiandae illum, voluptas laborum quas recusandae debitis sint odit adipisci doloribus exercitationem.",

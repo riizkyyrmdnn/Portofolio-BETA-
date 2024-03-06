@@ -1,24 +1,24 @@
 const projectList = [
     {
-        thumbnail: "../img/ProjectImage1.jpg",
+        thumbnail: "img/ProjectImage1.jpg",
         title: "Lorem ipsum dolor sit amet adipisicing elit.",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eos natus molestias quam et, placeat sit...",
         link: "",
     },
     {
-        thumbnail: "../img/ProjectImage2.jpg",
+        thumbnail: "img/ProjectImage2.jpg",
         title: "Lorem ipsum dolor sit amet adipisicing elit.",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eos natus molestias quam et, placeat sit...",
         link: "",
     },
     {
-        thumbnail: "../img/ProjectImage3.jpg",
+        thumbnail: "img/ProjectImage3.jpg",
         title: "Lorem ipsum dolor sit amet adipisicing elit.",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eos natus molestias quam et, placeat sit...",
         link: "",
     },
     {
-        thumbnail: "../img/ProjectImage4.jpg",
+        thumbnail: "img/ProjectImage4.jpg",
         title: "Lorem ipsum dolor sit amet adipisicing elit.",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eos natus molestias quam et, placeat sit...",
         link: "",

@@ -1,52 +1,52 @@
 
 const skillList = [
     {
-        icon: "../img/html-5-svgrepo-com.svg",
+        icon: "img/html-5-svgrepo-com.svg",
         title: "HTML",
         alt: "HTML logo from svgrepo.com",
     },
     {
-        icon: "../img/css-3-svgrepo-com.svg",
+        icon: "img/css-3-svgrepo-com.svg",
         title: "CSS",
         alt: "HTML logo from svgrepo.com",
     },
     {
-        icon: "../img/javascript-svgrepo-com.svg",
+        icon: "img/javascript-svgrepo-com.svg",
         title: "Javascript",
         alt: "Javascript logo from svgrepo.com",
     },
     {
-        icon: "../img/reactjs-svgrepo-com.svg",
+        icon: "img/reactjs-svgrepo-com.svg",
         title: "ReactJs",
         alt: "ReactJS logo from svgrepo.com",
     },
     {
-        icon: "../img/php-svgrepo-com.svg",
+        icon: "img/php-svgrepo-com.svg",
         title: "PHP",
         alt: "PHP logo from svgrepo.com",
     },
     {
-        icon: "../img/mongo-svgrepo-com.svg",
+        icon: "img/mongo-svgrepo-com.svg",
         title: "MongoDB",
         alt: "MongoDB logo from svgrepo.com",
     },
     {
-        icon: "../img/mysql-logo-svgrepo-com.svg",
+        icon: "img/mysql-logo-svgrepo-com.svg",
         title: "MySQL",
         alt: "MySQL logo from svgrepo.com",
     },
     {
-        icon: "../img/adobe-photoshop-svgrepo-com.svg",
+        icon: "img/adobe-photoshop-svgrepo-com.svg",
         title: "Photoshop",
         alt: "Photoshop logo from svgrepo.com",
     },
     {
-        icon: "../img/adobe-illustrator-svgrepo-com.svg",
+        icon: "img/adobe-illustrator-svgrepo-com.svg",
         title: "Illustrator",
         alt: "Illustrator logo from svgrepo.com",
     },
     {
-        icon: "../img/adobe-premiere-svgrepo-com.svg",
+        icon: "img/adobe-premiere-svgrepo-com.svg",
         title: "premiere",
         alt: "Premiere logo from svgrepo.com",
     },
