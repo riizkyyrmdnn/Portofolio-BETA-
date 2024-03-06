@@ -1,0 +1,462 @@
+#main {
+  grid-area: point;
+  overflow-y: auto;
+
+  section[data-page="about"] {
+    padding: $desktop-padding;
+    background: map-get($map: $colors, $key: primarywhite);
+
+    #about-section-container {
+      width: 100%;
+      margin: $desktop-margin;
+
+      .about-page-wrapper {
+        @include displays(flex, null, null, space-evenly, null);
+
+        .about-column-left {
+          width: max-content;
+          height: 100%;
+
+          .user-image {
+            width: $about-page-user-image;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .about-column-right {
+          width: calc(100% - 50%);
+
+          .title-about {
+            color: map-get($map: $colors, $key: primaryblue);
+            font-size: map-get($map: $fontsize, $key: xx-largr);
+            font-weight: map-get($map: $fontweight, $key: skinny);
+            text-transform: capitalize;
+          }
+          .description-about {
+            font-size: map-get($map: $fontsize, $key: sm);
+          }
+          .subtitle-about {
+            color: map-get($map: $colors, $key: primaryblue);
+            font-size: map-get($map: $fontsize, $key: x-lar);
+            font-weight: map-get($map: $fontweight, $key: skinny);
+            text-transform: capitalize;
+            margin-top: 25px;
+          }
+          .icons-buttons-about {
+            @include displays(flex, null, null, flex-start, null);
+            margin-top: 10px;
+
+            .icon-button {
+              @include displays(inline-flex, null, null, center, center);
+              font-size: map-get($map: $fontsize, $key: sm);
+              width: $icons-button-size;
+              height: $icons-button-size;
+              margin: 0 5px;
+              color: map-get($map: $colors, $key: darkn);
+              border-radius: 50%;
+              box-shadow: 0 0 2px
+                rgba($color: map-get($map: $colors, $key: darkn), $alpha: 0.3);
+              transition: 0.5s ease;
+              &:hover {
+                color: map-get($map: $colors, $key: primarywhite);
+                background: darken(
+                  $color: map-get($map: $colors, $key: primaryblue),
+                  $amount: 5
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #education-section-container {
+      @include displays(flex, wrap, null, flex-start, null);
+      width: 100%;
+      margin: $desktop-margin;
+
+      .education-page-wrapper {
+        width: calc(100% - 55%);
+        margin: 8px;
+        padding: 4px;
+        background: map-get($map: $colors, $key: secondwhite);
+        border-radius: 8px;
+
+        .fas.fa-graduation-cap {
+          font-size: map-get($map: $fontsize, $key: xx-largr);
+          color: map-get($map: $colors, $key: primaryblue);
+          float: left;
+          height: 100%;
+          padding: 6px 10px 6px 6px;
+        }
+        .education-year {
+          font-size: map-get($map: $fontsize, $key: lar);
+          font-weight: map-get($map: $fontweight, $key: narrow);
+        }
+        .education-name {
+          font-size: map-get($map: $fontsize, $key: sm);
+        }
+      }
+    }
+  }
+
+  section[data-page="service"] {
+    padding: $desktop-padding;
+    background: map-get($map: $colors, $key: secondwhite);
+
+    #service-section-container {
+      @include displays(flex, wrap, null, center, null);
+      margin: $desktop-margin;
+
+      .service-page-wrapper {
+        text-align: center;
+        width: 220px;
+        margin: 5px;
+        padding: 10px 0;
+        background: map-get($map: $colors, $key: primarywhite);
+        outline: 1.6px solid map-get($map: $colors, $key: primaryblue);
+        border-radius: 5px;
+        box-shadow: 0 0 2px map-get($map: $colors, $key: primaryblue);
+        transition: 0.5s ease;
+        cursor: default;
+        &:hover {
+          color: map-get($map: $colors, $key: primarywhite);
+          background: map-get($map: $colors, $key: primaryblue);
+          .fas {
+            background: map-get($map: $colors, $key: primarywhite);
+          }
+          .service-title {
+            color: map-get($map: $colors, $key: primarywhite);
+          }
+        }
+        .fas {
+          @include displays(flex, null, null, center, center);
+          font-size: map-get($map: $fontsize, $key: xx-largr);
+          width: $service-icon-size;
+          height: $service-icon-size;
+          color: map-get($map: $colors, $key: primaryblue);
+          margin: 15px auto;
+          background: rgba(
+            $color: map-get($map: $colors, $key: primaryblue),
+            $alpha: 0.2
+          );
+          border-radius: 5px;
+        }
+        .service-title {
+          color: map-get($map: $colors, $key: primaryblue);
+          font-size: map-get($map: $fontsize, $key: sm);
+          font-weight: map-get($map: $fontweight, $key: skinny);
+          text-transform: capitalize;
+          margin-top: 6px;
+        }
+        .service-text {
+          font-size: map-get($map: $fontsize, $key: x-sm);
+          width: calc(100% - 25%);
+          margin: 7px auto 3px;
+        }
+      }
+    }
+  }
+
+  section[data-page="skill"] {
+    padding: $desktop-padding;
+    background: map-get($map: $colors, $key: primarywhite);
+
+    #skill-area-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+      justify-content: center;
+      margin: $desktop-margin;
+
+      .skill-page-wrapper {
+        text-align: center;
+        margin: 15px;
+
+        .skill-logo {
+          width: $skills-logo-size;
+        }
+        .title-logo {
+          font-size: map-get($map: $fontsize, $key: smer);
+          font-weight: map-get($map: $fontweight, $key: skinny);
+        }
+      }
+    }
+
+    #work-area-container {
+      @include displays(flex, wrap, null, flex-start, null);
+      margin-top: 25px;
+
+      .work-page-wrapper {
+        width: calc(100% - 55%);
+        margin: 5px;
+        padding: 4px;
+        background: map-get($map: $colors, $key: secondwhite);
+        border-radius: 8px;
+        
+        .fas.fa-briefcase {
+          float: left;
+          font-size: map-get($map: $fontsize, $key: xx-largr);
+          color: map-get($map: $colors, $key: primaryblue);
+          height: 100%;
+          padding: 6px 15px 6px 6px;
+        }
+        .work-year-title {
+          font-size: map-get($map: $fontsize, $key: lar);
+          font-weight: map-get($map: $fontweight, $key: narrow);
+        }
+        .work-description {
+          font-size: map-get($map: $fontsize, $key: smer);
+        }
+      }
+    }
+  }
+
+  section[data-page="project"] {
+    padding: $desktop-padding;
+    background: map-get($map: $colors, $key: secondwhite);
+
+    #project-area-container {
+      @include displays(flex, wrap, null, center, center);
+      margin: $desktop-margin;
+
+      .project-page-wrapper {
+        width: $project-content-width;
+        margin: 8px;
+        background: map-get($map: $colors, $key: primarywhite);
+        border-radius: 5px;
+        overflow: hidden;
+
+        .thumbnail-container {
+          width: 100%;
+          height: $project-thumbnail-height;
+
+          .project-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .project-text-area {
+          width: 100%;
+          padding: 8px;
+
+          .project-title {
+            font-size: map-get($map: $fontsize, $key: lar);
+            font-weight: map-get($map: $fontweight, $key: skinny);
+            text-transform: uppercase;
+          }
+          .project-desc {
+            font-size: map-get($map: $fontsize, $key: x-sm);
+            font-weight: map-get($map: $fontweight, $key: thin);
+          }
+          .project-readmore-button {
+            color: map-get($map: $colors, $key: primaryblue);
+            font-size: map-get($map: $fontsize, $key: med);
+            font-weight: map-get($map: $fontweight, $key: slim);
+            text-transform: capitalize;
+            margin: 15px 0;
+            &:hover {
+              text-decoration: underline;
+              .fas.fa-arrow-right {
+                left: 10px;
+              }
+            }
+            .fas.fa-arrow-right {
+              position: relative;
+              font-size: map-get($map: $fontsize, $key: smer);
+              left: 5px;
+              transition: 0.5s ease-in;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section[data-page="blog"] {
+    padding: $desktop-padding;
+    background: map-get($map: $colors, $key: primarywhite);
+
+    #blog-area-container {
+      @include displays(flex, wrap, null, center, nul);
+      margin: $desktop-margin;
+
+      .blog-page-wrapper {
+        text-align: left;
+        width: $blog-content-width;
+        margin: 0 8px;
+        background: transparent;
+        cursor: pointer;
+        &:hover {
+          .thumbnail-wrapper {
+            outline: 2px solid map-get($map: $colors, $key: primaryblue);
+            .blog-thumbnail {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        .thumbnail-wrapper {
+          width: 100%;
+          height: $blog-thumbnail-height;
+          border-radius: 8px;
+          overflow: hidden;
+
+          .blog-thumbnail {
+            width: 100%;
+            height: 100%;
+            transition: 0.5s ease;
+          }
+        }
+
+        .blog-text-area {
+          width: 100%;
+
+          .blog-title {
+            font-size: map-get($map: $fontsize, $key: largr);
+            font-weight: map-get($map: $fontweight, $key: skinny);
+            text-transform: uppercase;
+            margin: 5px 0;
+            &:hover {
+              color: map-get($map: $colors, $key: primaryblue);
+              text-decoration: underline;
+            }
+          }
+          .blog-creator-name {
+            font-size: map-get($map: $fontsize, $key: sm);
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  section[data-page="contact"] {
+    padding: $desktop-padding;
+    background: map-get($map: $colors, $key: secondwhite);
+
+    #contact-area-container {
+      font-size: map-get($map: $fontsize, $key: smer);
+      width: calc(100% - 35%);
+      margin: 25px auto;
+
+      .input-form {
+        height: 100%;
+        padding: 15px;
+        label {
+          display: block;
+          font-size: map-get($map: $fontsize, $key: sm);
+          font-weight: map-get($map: $fontweight, $key: thin);
+          text-transform: capitalize;
+          margin-top: 8px;
+        }
+        input {
+          width: 100%;
+          display: block;
+          margin-top: 3px;
+          padding: 7px;
+          background: map-get($map: $colors, $key: primarywhite);
+          border-radius: 5px;
+          &:focus {
+            outline: 1.5px solid map-get($map: $colors, $key: primaryblue);
+          }
+        }
+        textarea {
+          display: block;
+          width: 100%;
+          resize: none;
+          margin-top: 3px;
+          padding: 5px;
+          background: map-get($map: $colors, $key: primarywhite);
+          border-radius: 5px;
+          &:focus {
+            outline: 1.5px solid map-get($map: $colors, $key: primaryblue);
+          }
+        }
+        button[type="submit"] {
+          display: block;
+          font-size: map-get($map: $fontsize, $key: smer);
+          font-weight: map-get($map: $fontweight, $key: slim);
+          width: calc(100% - 50%);
+          margin: 15px auto 0;
+          padding: 3px 0;
+          color: map-get($map: $colors, $key: primarywhite);
+          background: map-get($map: $colors, $key: secondblue);
+          border-radius: 20px;
+          cursor: pointer;
+          &:hover {
+            background: darken(
+              $color: map-get($map: $colors, $key: secondblue),
+              $amount: 5
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+footer[data-page="footer"] {
+  background: map-get($map: $colors, $key: primarywhite);
+
+  #footer-area-container {
+    @include displays(flex, null, null, space-evenly, null);
+    padding: 10px 0;
+
+    .footer-box {
+      text-align: center;
+      height: 100%;
+      margin: $desktop-margin;
+      &:first-child .link-box {
+        text-align: left;
+      }
+      .footer-title {
+        color: map-get($map: $colors, $key: secondblue);
+        font-size: map-get($map: $fontsize, $key: lar);
+        font-weight: map-get($map: $fontweight, $key: skinny);
+        text-transform: capitalize;
+      }
+      .link-box {
+        @include displays(flex, null, column, null, null);
+        margin-top: 8px;
+
+        .link {
+          font-size: map-get($map: $fontsize, $key: smer);
+          font-weight: map-get($map: $fontweight, $key: thin);
+          text-transform: capitalize;
+          color: map-get($map: $colors, $key: darkn);
+          &:hover:not(.footer-box:first-child .link) {
+            color: map-get($map: $colors, $key: primaryblue);
+            text-decoration: underline;
+          }
+        }
+        .contact {
+          font-size: map-get($map: $fontsize, $key: smer);
+          font-weight: map-get($map: $fontweight, $key: slim);
+          
+          .icon {
+            color: map-get($map: $colors, $key: primaryblue);
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .text {
+    font-size: map-get($map: $fontsize, $key: x-sm);
+    width: calc(100% - 30%);
+    margin: 10px auto;
+    text-align: center;
+  }
+  .copyright {
+    display: block;
+    font-size: map-get($map: $fontsize, $key: smer);
+    font-weight: map-get($map: $fontweight, $key: thin);
+    width: 100%;
+    color: map-get($map: $colors, $key: darkn);
+    text-align: center;
+    padding: 6px 0;
+  }
+}

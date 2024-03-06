@@ -1,0 +1,96 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+
+$colors: (
+  darkn: #020403,
+  primarywhite: #f9faff,
+  secondwhite: #f0f4ff,
+  primaryblue: #2a51fb,
+  secondblue: #3c97ea
+);
+
+$fontsize: (
+  xx-sm: 10px,
+  x-sm: 12px,
+  smer: 14px,
+  sm: 15px,
+  med: 16px,
+  lar: 18px,
+  largr: 20px,
+  x-lar: 22px,
+  xx-largr: 25px
+);
+
+$fontweight: (
+  regular: 400,
+  thin: 500,
+  slim: 600,
+  narrow: 800,
+  skinny: bold,
+  thickn: bolder
+);
+
+$profile-picture-image: 100px;
+
+$about-page-user-image: 280px;
+
+$project-content-width: 380px;
+$project-thumbnail-height: 200px;
+
+$blog-content-width: 290px;
+$blog-thumbnail-height: 160px;
+
+$icons-button-size: 28px;
+$service-icon-size: 50px;
+$skills-logo-size: 90px;
+
+$small-padding: 20px 10px;
+$medium-padding: 24px 14px;
+$large-padding: 28px 18px;
+$desktop-padding: 30px 20px;
+
+$small-margin: 20px 0;
+$medium-margin: 20px 0;
+$large-margin: 20px 0;
+$desktop-margin: 20px 0;
+
+
+@mixin displays($display, $wrap, $direction, $justify, $align) {
+  display: $display;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+* {
+  font: normal normal map-get($map: $fontweight, $key: regular) 100% "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+#app {
+  display: grid;
+  grid-template-areas: "main point";
+  grid-template-columns: calc(100% - 75%) auto;
+  grid-template-rows: 100vh;
+}
+
+[data-title="main"] {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto;
+  text-transform: capitalize;
+  width: max-content;
+  color: map-get($map: $colors, $key: darkn);
+
+  #word {
+    color: map-get($map: $colors, $key: primaryblue);
+    font-weight: bold;
+  }
+}

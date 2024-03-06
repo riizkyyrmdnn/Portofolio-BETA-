@@ -1,0 +1,287 @@
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  #profile {
+    [data-page="profile"] {
+      padding: 15px 0;
+
+      .profile-section {
+        text-align: center;
+
+        .profile-picture {
+          width: 80px;
+          height: 80px;
+        }
+        .username {
+          font-size: map-get($map: $fontsize, $key: lar);
+          margin-top: 4px;
+        }
+        .position {
+          font-size: map-get($map: $fontsize, $key: med);
+        }
+      }
+
+      #navigation {
+        margin: 15px 0;
+        padding: 5px 0;
+
+        .navbar-button {
+          margin: 5px 0;
+          padding: 3px 4px;
+
+          .nav-name {
+            font-size: map-get($map: $fontsize, $key: sm);
+          }
+          .fas {
+            font-size: map-get($map: $fontsize, $key: sm);
+          }
+        }
+      }
+
+      #profile-buttons {
+        width: 100%;
+        margin-top: 20px;
+
+        .moreButton {
+          font-size: map-get($map: $fontsize, $key: smer);
+          width: calc(100% - 25%);
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+
+  #main {
+    section[data-page="about"] {
+      #about-section-container {
+        width: 100%;
+
+        .about-page-wrapper {
+          .about-column-left {
+            .user-image {
+              width: 220px;
+              height: 100%;
+            }
+          }
+
+          .about-column-right {
+            .title-about {
+              font-size: map-get($map: $fontsize, $key: xx-largr);
+            }
+            .description-about {
+              font-size: map-get($map: $fontsize, $key: sm);
+            }
+            .subtitle-about {
+              font-size: map-get($map: $fontsize, $key: largr);
+            }
+            .icons-buttons-about {
+              margin-top: 8px;
+
+              .icon-button {
+                font-size: map-get($map: $fontsize, $key: sm);
+              }
+            }
+          }
+        }
+      }
+
+      #education-section-container {
+        margin-top: 30px;
+
+        .education-page-wrapper {
+          .fas.fa-graduation-cap {
+            font-size: map-get($map: $fontsize, $key: xx-largr);
+          }
+          .education-year {
+            font-size: map-get($map: $fontsize, $key: lar);
+          }
+          .education-name {
+            font-size: map-get($map: $fontsize, $key: sm);
+          }
+        }
+      }
+    }
+
+    section[data-page="service"] {
+      #service-section-container {
+        .service-page-wrapper {
+          width: 250px;
+          margin: 5px;
+          padding: 15px;
+
+          .fas {
+            font-size: 22px;
+            width: calc($service-icon-size - 6px);
+            height: calc($service-icon-size - 6px);
+          }
+          .service-title {
+            font-size: map-get($map: $fontsize, $key: sm);
+          }
+          .service-text {
+            font-size: map-get($map: $fontsize, $key: x-sm);
+          }
+        }
+      }
+    }
+
+    section[data-page="skill"] {
+      #skill-area-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 160px));
+
+        .skill-page-wrapper {
+          margin: 13px;
+
+          .skill-logo {
+            width: calc($skills-logo-size - 10px);
+          }
+          .title-logo {
+            font-size: map-get($map: $fontsize, $key: smer);
+          }
+        }
+      }
+
+      #work-area-container {
+        margin-top: 35px;
+
+        .work-page-wrapper {
+          margin: 5px;
+
+          .fas.fa-briefcase {
+            font-size: map-get($map: $fontsize, $key: largr);
+            padding: 3px 15px;
+          }
+          .work-year-title {
+            font-size: map-get($map: $fontsize, $key: med);
+          }
+          .work-description {
+            font-size: map-get($map: $fontsize, $key: x-sm);
+          }
+        }
+      }
+    }
+
+    section[data-page="project"] {
+      #project-area-container {
+        .project-page-wrapper {
+          width: 300px;
+          margin: 6px;
+
+          .thumbnail-container {
+            height: 160px;
+          }
+
+          .project-text-area {
+            padding: 7px;
+
+            .project-title {
+              font-size: map-get($map: $fontsize, $key: largr);
+            }
+            .project-desc {
+              font-size: map-get($map: $fontsize, $key: smer);
+            }
+            .project-readmore-button {
+              font-size: map-get($map: $fontsize, $key: sm);
+
+              .fas.fa-arrow-right {
+                font-size: map-get($map: $fontsize, $key: smer);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section[data-page="blog"] {
+      #blog-area-container {
+        .blog-page-wrapper {
+          width: 220px;
+          margin: 7px;
+
+          .thumbnail-wrapper {
+            height: 130px;
+          }
+
+          .blog-text-area {
+            .blog-title {
+              font-size: map-get($map: $fontsize, $key: lar);
+            }
+            .blog-creator-name {
+              font-size: map-get($map: $fontsize, $key: smer);
+            }
+          }
+        }
+      }
+    }
+
+    section[data-page="contact"] {
+      #contact-area-container {
+        font-size: map-get($map: $fontsize, $key: smer);
+        width: calc(100% - 25%);
+
+        .input-form {
+          padding: 14px;
+          label {
+            font-size: map-get($map: $fontsize, $key: sm);
+          }
+          input {
+            padding: 5px;
+          }
+          button[type="submit"] {
+            font-size: map-get($map: $fontsize, $key: sm);
+            width: calc(100% - 60%);
+            margin: 14px auto 0;
+            padding: 2px 0;
+          }
+        }
+      }
+    }
+
+    footer[data-page="footer"] {
+      width: 100%;
+
+      #footer-area-container {
+        gap: 6px;
+        padding: 0;
+
+        .footer-box {
+          width: max-content;
+
+          .footer-title {
+            font-size: map-get($map: $fontsize, $key: med);
+          }
+          .link-box {
+            margin-top: 8px;
+            font-size: map-get($map: $fontsize, $key: smer);
+            .link {
+              font-size: map-get($map: $fontsize, $key: smer);
+            }
+          }
+          .contact {
+            font-size: map-get($map: $fontsize, $key: smer);
+          }
+        }
+      }
+      .text {
+        font-size: map-get($map: $fontsize, $key: x-sm);
+        width: calc(100% - 18%);
+      }
+      .copyright {
+        font-size: map-get($map: $fontsize, $key: smer);
+        padding: 4px 0;
+      }
+    }
+  }
+
+  [data-page="error"] {
+    .error-title {
+      font-size: calc(map-get($map: $fontsize, $key: xx-largr) + 95px);
+    }
+    .error-text {
+      width: calc(100% - 20%);
+      font-size: map-get($map: $fontsize, $key: x-sm);
+    }
+    .back-page {
+      font-size: map-get($map: $fontsize, $key: sm);
+      width: calc(100% - 80%);
+      padding: 4px;
+    }
+  }
+}

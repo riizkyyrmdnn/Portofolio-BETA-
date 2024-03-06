@@ -1,0 +1,1683 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+* {
+  font: normal normal 400 100% "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+#app {
+  display: grid;
+  grid-template-areas: "main point";
+  grid-template-columns: 25% auto;
+  grid-template-rows: 100vh;
+}
+
+[data-title=main] {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto;
+  text-transform: capitalize;
+  width: max-content;
+  color: #020403;
+}
+[data-title=main] #word {
+  color: #2a51fb;
+  font-weight: bold;
+}
+
+#profile {
+  grid-area: main;
+}
+#profile [data-page=profile] {
+  padding: 17px 0;
+  background: #f9faff;
+}
+#profile [data-page=profile] .profile-section {
+  text-align: center;
+}
+#profile [data-page=profile] .profile-section::after {
+  content: "";
+  display: block;
+  width: 85%;
+  height: 1.48px;
+  background: rgba(2, 4, 3, 0.2);
+  margin: 10px auto;
+  border-radius: 25px;
+}
+#profile [data-page=profile] .profile-section .profile-picture {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#profile [data-page=profile] .profile-section .username {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+#profile [data-page=profile] .profile-section .position {
+  color: #2a51fb;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+#profile [data-page=profile] #hamburger-menu {
+  display: none;
+}
+#profile [data-page=profile] #navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+#profile [data-page=profile] #navigation .navigation-buttons {
+  position: relative;
+  width: 90%;
+  margin: 5px 0;
+  padding: 3px 5px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 15px;
+}
+#profile [data-page=profile] #navigation .navigation-buttons:hover {
+  color: #f9faff;
+  background: linear-gradient(45deg, rgba(60, 151, 234, 0.9), rgba(42, 81, 251, 0.9));
+}
+#profile [data-page=profile] #navigation .navigation-buttons .navigation-name {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+#profile [data-page=profile] #navigation .navigation-buttons .fas {
+  position: absolute;
+  top: 0;
+  left: 4%;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+#profile [data-page=profile] #profile-buttons {
+  width: 100%;
+  margin-top: 25px;
+}
+#profile [data-page=profile] #profile-buttons .moreButton {
+  position: relative;
+  display: block;
+  width: 65%;
+  text-transform: capitalize;
+  margin: 12px auto;
+  padding: 3px 0;
+  color: #f9faff;
+  background: #2a51fb;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#profile [data-page=profile] #profile-buttons .moreButton:hover {
+  color: #f9faff;
+  background: linear-gradient(45deg, rgba(60, 151, 234, 0.9), rgba(42, 81, 251, 0.9));
+}
+#profile [data-page=profile] #profile-buttons .moreButton .fas {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  font-size: 15px;
+}
+#profile [data-page=profile] #profile-buttons .moreButton .button-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#main {
+  grid-area: point;
+  overflow-y: auto;
+}
+#main section[data-page=about] {
+  padding: 30px 20px;
+  background: #f9faff;
+}
+#main section[data-page=about] #about-section-container {
+  width: 100%;
+  margin: 20px 0;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper .about-column-left {
+  width: max-content;
+  height: 100%;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper .about-column-left .user-image {
+  width: 280px;
+  height: 100%;
+  object-fit: cover;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right {
+  width: 50%;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .title-about {
+  color: #2a51fb;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .description-about {
+  font-size: 15px;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .subtitle-about {
+  color: #2a51fb;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 25px;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about .icon-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 28px;
+  height: 28px;
+  margin: 0 5px;
+  color: #020403;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(2, 4, 3, 0.3);
+  transition: 0.5s ease;
+}
+#main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about .icon-button:hover {
+  color: #f9faff;
+  background: #113dfb;
+}
+#main section[data-page=about] #education-section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 20px 0;
+}
+#main section[data-page=about] #education-section-container .education-page-wrapper {
+  width: 45%;
+  margin: 8px;
+  padding: 4px;
+  background: #f0f4ff;
+  border-radius: 8px;
+}
+#main section[data-page=about] #education-section-container .education-page-wrapper .fas.fa-graduation-cap {
+  font-size: 25px;
+  color: #2a51fb;
+  float: left;
+  height: 100%;
+  padding: 6px 10px 6px 6px;
+}
+#main section[data-page=about] #education-section-container .education-page-wrapper .education-year {
+  font-size: 18px;
+  font-weight: 800;
+}
+#main section[data-page=about] #education-section-container .education-page-wrapper .education-name {
+  font-size: 15px;
+}
+#main section[data-page=service] {
+  padding: 30px 20px;
+  background: #f0f4ff;
+}
+#main section[data-page=service] #service-section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+#main section[data-page=service] #service-section-container .service-page-wrapper {
+  text-align: center;
+  width: 220px;
+  margin: 5px;
+  padding: 10px 0;
+  background: #f9faff;
+  outline: 1.6px solid #2a51fb;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #2a51fb;
+  transition: 0.5s ease;
+  cursor: default;
+}
+#main section[data-page=service] #service-section-container .service-page-wrapper:hover {
+  color: #f9faff;
+  background: #2a51fb;
+}
+#main section[data-page=service] #service-section-container .service-page-wrapper:hover .fas {
+  background: #f9faff;
+}
+#main section[data-page=service] #service-section-container .service-page-wrapper:hover .service-title {
+  color: #f9faff;
+}
+#main section[data-page=service] #service-section-container .service-page-wrapper .fas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  color: #2a51fb;
+  margin: 15px auto;
+  background: rgba(42, 81, 251, 0.2);
+  border-radius: 5px;
+}
+#main section[data-page=service] #service-section-container .service-page-wrapper .service-title {
+  color: #2a51fb;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 6px;
+}
+#main section[data-page=service] #service-section-container .service-page-wrapper .service-text {
+  font-size: 12px;
+  width: 75%;
+  margin: 7px auto 3px;
+}
+#main section[data-page=skill] {
+  padding: 30px 20px;
+  background: #f9faff;
+}
+#main section[data-page=skill] #skill-area-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  justify-content: center;
+  margin: 20px 0;
+}
+#main section[data-page=skill] #skill-area-container .skill-page-wrapper {
+  text-align: center;
+  margin: 15px;
+}
+#main section[data-page=skill] #skill-area-container .skill-page-wrapper .skill-logo {
+  width: 90px;
+}
+#main section[data-page=skill] #skill-area-container .skill-page-wrapper .title-logo {
+  font-size: 14px;
+  font-weight: bold;
+}
+#main section[data-page=skill] #work-area-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 25px;
+}
+#main section[data-page=skill] #work-area-container .work-page-wrapper {
+  width: 45%;
+  margin: 5px;
+  padding: 4px;
+  background: #f0f4ff;
+  border-radius: 8px;
+}
+#main section[data-page=skill] #work-area-container .work-page-wrapper .fas.fa-briefcase {
+  float: left;
+  font-size: 25px;
+  color: #2a51fb;
+  height: 100%;
+  padding: 6px 15px 6px 6px;
+}
+#main section[data-page=skill] #work-area-container .work-page-wrapper .work-year-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+#main section[data-page=skill] #work-area-container .work-page-wrapper .work-description {
+  font-size: 14px;
+}
+#main section[data-page=project] {
+  padding: 30px 20px;
+  background: #f0f4ff;
+}
+#main section[data-page=project] #project-area-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper {
+  width: 380px;
+  margin: 8px;
+  background: #f9faff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper .thumbnail-container {
+  width: 100%;
+  height: 200px;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper .thumbnail-container .project-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area {
+  width: 100%;
+  padding: 8px;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-desc {
+  font-size: 12px;
+  font-weight: 500;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button {
+  color: #2a51fb;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 15px 0;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button:hover {
+  text-decoration: underline;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button:hover .fas.fa-arrow-right {
+  left: 10px;
+}
+#main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button .fas.fa-arrow-right {
+  position: relative;
+  font-size: 14px;
+  left: 5px;
+  transition: 0.5s ease-in;
+}
+#main section[data-page=blog] {
+  padding: 30px 20px;
+  background: #f9faff;
+}
+#main section[data-page=blog] #blog-area-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: nul;
+  margin: 20px 0;
+}
+#main section[data-page=blog] #blog-area-container .blog-page-wrapper {
+  text-align: left;
+  width: 290px;
+  margin: 0 8px;
+  background: transparent;
+  cursor: pointer;
+}
+#main section[data-page=blog] #blog-area-container .blog-page-wrapper:hover .thumbnail-wrapper {
+  outline: 2px solid #2a51fb;
+}
+#main section[data-page=blog] #blog-area-container .blog-page-wrapper:hover .thumbnail-wrapper .blog-thumbnail {
+  transform: scale(1.1);
+}
+#main section[data-page=blog] #blog-area-container .blog-page-wrapper .thumbnail-wrapper {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+#main section[data-page=blog] #blog-area-container .blog-page-wrapper .thumbnail-wrapper .blog-thumbnail {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+}
+#main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area {
+  width: 100%;
+}
+#main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+#main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-title:hover {
+  color: #2a51fb;
+  text-decoration: underline;
+}
+#main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-creator-name {
+  font-size: 15px;
+  margin-left: 5px;
+}
+#main section[data-page=contact] {
+  padding: 30px 20px;
+  background: #f0f4ff;
+}
+#main section[data-page=contact] #contact-area-container {
+  font-size: 14px;
+  width: 65%;
+  margin: 25px auto;
+}
+#main section[data-page=contact] #contact-area-container .input-form {
+  height: 100%;
+  padding: 15px;
+}
+#main section[data-page=contact] #contact-area-container .input-form label {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 8px;
+}
+#main section[data-page=contact] #contact-area-container .input-form input {
+  width: 100%;
+  display: block;
+  margin-top: 3px;
+  padding: 7px;
+  background: #f9faff;
+  border-radius: 5px;
+}
+#main section[data-page=contact] #contact-area-container .input-form input:focus {
+  outline: 1.5px solid #2a51fb;
+}
+#main section[data-page=contact] #contact-area-container .input-form textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  margin-top: 3px;
+  padding: 5px;
+  background: #f9faff;
+  border-radius: 5px;
+}
+#main section[data-page=contact] #contact-area-container .input-form textarea:focus {
+  outline: 1.5px solid #2a51fb;
+}
+#main section[data-page=contact] #contact-area-container .input-form button[type=submit] {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  width: 50%;
+  margin: 15px auto 0;
+  padding: 3px 0;
+  color: #f9faff;
+  background: #3c97ea;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#main section[data-page=contact] #contact-area-container .input-form button[type=submit]:hover {
+  background: #258be8;
+}
+
+footer[data-page=footer] {
+  background: #f9faff;
+}
+footer[data-page=footer] #footer-area-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+footer[data-page=footer] #footer-area-container .footer-box {
+  text-align: center;
+  height: 100%;
+  margin: 20px 0;
+}
+footer[data-page=footer] #footer-area-container .footer-box:first-child .link-box {
+  text-align: left;
+}
+footer[data-page=footer] #footer-area-container .footer-box .footer-title {
+  color: #3c97ea;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+footer[data-page=footer] #footer-area-container .footer-box .link-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+footer[data-page=footer] #footer-area-container .footer-box .link-box .link {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #020403;
+}
+footer[data-page=footer] #footer-area-container .footer-box .link-box .link:hover:not(.footer-box:first-child .link) {
+  color: #2a51fb;
+  text-decoration: underline;
+}
+footer[data-page=footer] #footer-area-container .footer-box .link-box .contact {
+  font-size: 14px;
+  font-weight: 600;
+}
+footer[data-page=footer] #footer-area-container .footer-box .link-box .contact .icon {
+  color: #2a51fb;
+  margin-right: 5px;
+}
+footer[data-page=footer] .text {
+  font-size: 12px;
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+}
+footer[data-page=footer] .copyright {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  color: #020403;
+  text-align: center;
+  padding: 6px 0;
+}
+
+[data-page=error] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  color: #f9faff;
+  background: #020403;
+}
+[data-page=error] .error-title {
+  font-size: 125px;
+  font-weight: bolder;
+}
+[data-page=error] .error-title #red {
+  color: #ff0000;
+  font-weight: bold;
+}
+[data-page=error] .error-text {
+  width: 75%;
+  font-size: 15px;
+}
+[data-page=error] .back-page {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: 17%;
+  margin-top: 25px;
+  padding: 4px 0;
+  color: #f9faff;
+  background: #2a51fb;
+  border-radius: 25px;
+  cursor: pointer;
+}
+[data-page=error] .back-page:hover {
+  background: #113dfb;
+}
+
+@media screen and (max-width: 480px) {
+  #app {
+    width: 100%;
+    display: block;
+  }
+  #profile {
+    width: 100%;
+  }
+  #profile [data-page=profile] {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 10px;
+    background: #f0f4ff;
+  }
+  #profile [data-page=profile] .profile-section {
+    width: max-content;
+  }
+  #profile [data-page=profile] .profile-section::after {
+    display: none;
+  }
+  #profile [data-page=profile] .profile-section .profile-picture {
+    display: none;
+  }
+  #profile [data-page=profile] .profile-section .username {
+    font-size: 16px;
+  }
+  #profile [data-page=profile] .profile-section .position {
+    display: none;
+  }
+  #profile [data-page=profile] #hamburger-menu {
+    display: block;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    cursor: pointer;
+  }
+  #profile [data-page=profile] #hamburger-menu .line {
+    display: block;
+    width: 20px;
+    height: 2.8px;
+    margin: 3px auto;
+    background: #020403;
+    border-radius: 25px;
+  }
+  #profile [data-page=profile] #navigation {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    padding: 0;
+    background: #f0f4ff;
+    overflow: hidden;
+  }
+  #profile [data-page=profile] #navigation.active {
+    display: flex;
+    max-height: 300px;
+  }
+  #profile [data-page=profile] #navigation .navbar-button {
+    width: 60%;
+  }
+  #profile [data-page=profile] #navigation .navbar-button .nav-name {
+    font-size: 14px;
+  }
+  #profile [data-page=profile] #navigation .navbar-button .fas {
+    position: absolute;
+    left: 3%;
+  }
+  #profile [data-page=profile] #profile-buttons {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: 0;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton {
+    position: relative;
+    margin: 0 8px;
+    width: 25px;
+    height: 25px;
+    border-radius: 0;
+    background: transparent;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton:hover {
+    background: transparent;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton:hover .fas {
+    color: #2a51fb;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton .fas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    color: #020403;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton .button-title {
+    display: none;
+  }
+  #main {
+    width: 100%;
+  }
+  #main section[data-page=about] {
+    padding: 20px 10px;
+  }
+  #main section[data-page=about] #about-section-container {
+    margin: 20px 0;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-left {
+    height: auto;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-left .user-image {
+    width: 220px;
+    height: 220px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right {
+    width: 100%;
+    margin-top: 16px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .title-about {
+    font-size: 20px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .description-about {
+    font-size: 12px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .subtitle-about {
+    font-size: 18px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about {
+    justify-content: center;
+    margin: 10px 0;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about .icon-button {
+    font-size: 14px;
+  }
+  #main section[data-page=about] #education-section-container {
+    margin: 20px 0;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper {
+    width: 48%;
+    margin: 3px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .fas.fa-graduation-cap {
+    font-size: 18px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .education-year {
+    font-size: 16px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .education-name {
+    font-size: 14px;
+  }
+  #main section[data-page=service] {
+    padding: 20px 10px;
+  }
+  #main section[data-page=service] #service-section-container {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper {
+    margin: 5px auto;
+  }
+  #main section[data-page=skill] {
+    padding: 20px 10px;
+  }
+  #main section[data-page=skill] #skill-area-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+    margin: 20px 0;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper {
+    margin: 10px;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper .skill-logo {
+    width: 72px;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper .title-logo {
+    font-size: 12px;
+  }
+  #main section[data-page=skill] #work-area-container {
+    margin: 20px 0;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper {
+    width: 48%;
+    margin: 3px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .fas.fa-briefcase {
+    font-size: 20px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .work-year-title {
+    font-size: 15px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .work-description {
+    font-size: 10px;
+  }
+  #main section[data-page=project] {
+    padding: 20px 10px;
+  }
+  #main section[data-page=project] #project-area-container {
+    margin: 20px 0;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper {
+    width: 320px;
+    margin: 6;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .thumbnail-container {
+    height: 170px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area {
+    padding: 6px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-title {
+    font-size: 16px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-desc {
+    font-size: 12px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button {
+    font-size: 14px;
+  }
+  #main section[data-page=blog] {
+    padding: 20px 10px;
+  }
+  #main section[data-page=blog] #blog-area-container {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper {
+    width: 260px;
+    margin: 6px auto;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .thumbnail-wrapper {
+    height: 140px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area {
+    width: 100%;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-title {
+    font-size: 18px;
+    margin: 3px 0;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-creator-name {
+    font-size: 12px;
+  }
+  #main section[data-page=contact] {
+    padding: 0;
+  }
+  #main section[data-page=contact] #contact-area-container {
+    font-size: 12px;
+    width: 80%;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form {
+    padding: 10px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form label {
+    font-size: 12px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form input {
+    padding: 5px;
+  }
+  #main footer[data-page=footer] {
+    width: 100%;
+  }
+  #main footer[data-page=footer] #footer-area-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box {
+    width: 100%;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .footer-title {
+    font-size: 15px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .link-box {
+    margin-top: 6px;
+    font-size: 12px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .link-box .link {
+    font-size: 12px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .contact {
+    font-size: 12px;
+  }
+  #main footer[data-page=footer] .text {
+    font-size: 10px;
+    width: 90%;
+  }
+  #main footer[data-page=footer] .copyright {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+  [data-page=error] .error-title {
+    font-size: 90px;
+  }
+  [data-page=error] .error-text {
+    width: 95%;
+    font-size: 10px;
+  }
+  [data-page=error] .back-page {
+    font-size: 14px;
+    width: 30%;
+    padding: 2px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #app {
+    width: 100%;
+    display: block;
+  }
+  #profile {
+    width: 100%;
+  }
+  #profile [data-page=profile] {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 7px 10px;
+    background: #f0f4ff;
+  }
+  #profile [data-page=profile] .profile-section {
+    width: max-content;
+  }
+  #profile [data-page=profile] .profile-section::after {
+    display: none;
+  }
+  #profile [data-page=profile] .profile-section .profile-picture {
+    display: none;
+  }
+  #profile [data-page=profile] .profile-section .username {
+    font-size: 16px;
+  }
+  #profile [data-page=profile] .profile-section .position {
+    display: none;
+  }
+  #profile [data-page=profile] #hamburger-menu {
+    display: block;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    cursor: pointer;
+  }
+  #profile [data-page=profile] #hamburger-menu .line {
+    display: block;
+    width: 20px;
+    height: 2.8px;
+    margin: 3px auto;
+    background: #020403;
+    border-radius: 25px;
+  }
+  #profile [data-page=profile] #navigation {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    padding: 0;
+    background: #f0f4ff;
+    overflow: hidden;
+  }
+  #profile [data-page=profile] #navigation.active {
+    display: flex;
+    max-height: 300px;
+  }
+  #profile [data-page=profile] #navigation .navbar-button {
+    width: 60%;
+  }
+  #profile [data-page=profile] #navigation .navbar-button .nav-name {
+    font-size: 14px;
+  }
+  #profile [data-page=profile] #navigation .navbar-button .fas {
+    position: absolute;
+    left: 3%;
+  }
+  #profile [data-page=profile] #profile-buttons {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: 0;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton {
+    position: relative;
+    margin: 0 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 0;
+    background: transparent;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton:hover {
+    background: transparent;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton:hover .fas {
+    color: #2a51fb;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton .fas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    color: #020403;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton .button-title {
+    display: none;
+  }
+  #main {
+    width: 100%;
+  }
+  #main section[data-page=about] {
+    padding: 24px 14px;
+  }
+  #main section[data-page=about] #about-section-container {
+    margin: 20px 0;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-left {
+    height: auto;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-left .user-image {
+    width: 220px;
+    height: 220px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right {
+    width: 100%;
+    margin-top: 16px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .title-about {
+    font-size: 20px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .description-about {
+    font-size: 12px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .subtitle-about {
+    font-size: 18px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about {
+    margin-top: 8px;
+    justify-content: center;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about .icon-button {
+    font-size: 14px;
+  }
+  #main section[data-page=about] #education-section-container {
+    margin: 20px 0;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper {
+    width: 48%;
+    margin: 3px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .fas.fa-graduation-cap {
+    font-size: 20px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .education-year {
+    font-size: 16px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .education-name {
+    font-size: 14px;
+  }
+  #main section[data-page=service] {
+    padding: 24px 14px;
+  }
+  #main section[data-page=service] #service-section-container {
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper {
+    width: 230px;
+    margin: 5px;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper .service-title {
+    margin-top: 6px;
+  }
+  #main section[data-page=skill] {
+    padding: 24px 14px;
+  }
+  #main section[data-page=skill] #skill-area-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+    margin: 20px 0;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper {
+    margin: 10px 10px 30px;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper .skill-logo {
+    width: 80px;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper .title-logo {
+    font-size: 14px;
+  }
+  #main section[data-page=skill] #work-area-container {
+    margin-top: 25px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper {
+    width: 49%;
+    margin: 2px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .fas.fa-briefcase {
+    font-size: 22px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .work-year-title {
+    font-size: 16px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .work-description {
+    font-size: 10px;
+  }
+  #main section[data-page=project] {
+    padding: 24px 14px;
+  }
+  #main section[data-page=project] #project-area-container {
+    margin: 20px 0;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper {
+    width: 320px;
+    margin: 6;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .thumbnail-container {
+    height: 170px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area {
+    padding: 6px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-title {
+    font-size: 16px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-desc {
+    font-size: 12px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button {
+    font-size: 14px;
+  }
+  #main section[data-page=blog] {
+    padding: 24px 14px;
+  }
+  #main section[data-page=blog] #blog-area-container {
+    margin: 20px 0;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper {
+    width: 260px;
+    margin: 8px auto;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .thumbnail-wrapper {
+    height: 140px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area {
+    width: 100%;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-title {
+    font-size: 18px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-creator-name {
+    font-size: 12px;
+  }
+  #main section[data-page=contact] {
+    padding: 0;
+  }
+  #main section[data-page=contact] #contact-area-container {
+    font-size: 12px;
+    width: 80%;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form {
+    padding: 10px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form label {
+    font-size: 12px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form input {
+    padding: 5px;
+  }
+  #main footer[data-page=footer] {
+    width: 100%;
+  }
+  #main footer[data-page=footer] #footer-area-container {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box {
+    width: max-content;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .footer-title {
+    font-size: 15px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .link-box {
+    margin-top: 6px;
+    font-size: 12px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .link-box .link {
+    font-size: 12px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .contact {
+    font-size: 12px;
+  }
+  #main footer[data-page=footer] .text {
+    font-size: 10px;
+    width: 90%;
+  }
+  #main footer[data-page=footer] .copyright {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+  [data-page=error] .error-title {
+    font-size: 105px;
+  }
+  [data-page=error] .error-text {
+    width: 92%;
+    font-size: 12px;
+  }
+  [data-page=error] .back-page {
+    font-size: 15px;
+    width: 27%;
+    padding: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #profile [data-page=profile] {
+    padding: 10px 0;
+  }
+  #profile [data-page=profile] .profile-section {
+    text-align: center;
+  }
+  #profile [data-page=profile] .profile-section .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+  #profile [data-page=profile] .profile-section .username {
+    font-size: 16px;
+  }
+  #profile [data-page=profile] .profile-section .position {
+    font-size: 15px;
+  }
+  #profile [data-page=profile] #navigation {
+    padding: 4px 0;
+  }
+  #profile [data-page=profile] #navigation .navbar-button {
+    margin: 4px 0;
+    padding: 2px 3px;
+  }
+  #profile [data-page=profile] #navigation .navbar-button .nav-name {
+    font-size: 14px;
+  }
+  #profile [data-page=profile] #navigation .navbar-button .fas {
+    font-size: 14px;
+  }
+  #profile [data-page=profile] #profile-buttons {
+    width: 100%;
+    margin-top: 15px;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton {
+    width: 85%;
+    border-radius: 25px;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton .fas {
+    font-size: 14px;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton .button-title {
+    font-size: 14px;
+  }
+  #main section[data-page=about] #about-section-container {
+    width: 100%;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-left .user-image {
+    width: 200px;
+    height: 100%;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .title-about {
+    font-size: 22px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .description-about {
+    font-size: 14px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .subtitle-about {
+    font-size: 18px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about {
+    margin-top: 8px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about .icon-button {
+    font-size: 14px;
+  }
+  #main section[data-page=about] #education-section-container {
+    margin-top: 30px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .fas.fa-graduation-cap {
+    font-size: 22px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .education-year {
+    font-size: 16px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .education-name {
+    font-size: 14px;
+  }
+  #main section[data-page=service] #service-section-container {
+    flex-wrap: wrap;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper {
+    width: 250px;
+    margin: 6px;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper .fas {
+    font-size: 22px;
+    width: 44px;
+    height: 44px;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper .service-title {
+    font-size: 15px;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper .service-text {
+    font-size: 12px;
+  }
+  #main section[data-page=skill] #skill-area-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 160px));
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper {
+    margin: 13px;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper .skill-logo {
+    width: 80px;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper .title-logo {
+    font-size: 14px;
+  }
+  #main section[data-page=skill] #work-area-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+    margin-top: 30px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper {
+    width: 48%;
+    margin: 5px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .fas.fa-briefcase {
+    font-size: 20px;
+    padding: 4px 10px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .work-year-title {
+    font-size: 16px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .work-description {
+    font-size: 12px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper {
+    width: 240px;
+    margin: 6px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .thumbnail-container {
+    height: 150px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area {
+    padding: 6px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-title {
+    font-size: 18px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-desc {
+    font-size: 12px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button {
+    font-size: 14px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button .fas.fa-arrow-right {
+    font-size: 12px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper {
+    width: 245px;
+    margin: 7px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .thumbnail-wrapper {
+    height: 130px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-title {
+    font-size: 18px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-creator-name {
+    font-size: 14px;
+  }
+  #main section[data-page=contact] #contact-area-container {
+    font-size: 12px;
+    width: 85%;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form {
+    padding: 12px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form label {
+    font-size: 14px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form input {
+    padding: 5px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form button[type=submit] {
+    font-size: 14px;
+    margin: 13px auto 0;
+    padding: 2px 0;
+  }
+  #main footer[data-page=footer] {
+    width: 100%;
+  }
+  #main footer[data-page=footer] #footer-area-container {
+    gap: 5px;
+    padding: 0;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box {
+    width: max-content;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .footer-title {
+    font-size: 15px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .link-box {
+    margin-top: 6px;
+    font-size: 12px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .link-box .link {
+    font-size: 12px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .contact {
+    font-size: 12px;
+  }
+  #main footer[data-page=footer] .text {
+    font-size: 10px;
+    width: 90%;
+  }
+  #main footer[data-page=footer] .copyright {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+  [data-page=error] .error-title {
+    font-size: 115px;
+  }
+  [data-page=error] .error-text {
+    width: 85%;
+    font-size: 12px;
+  }
+  [data-page=error] .back-page {
+    font-size: 15px;
+    width: 25%;
+    padding: 3px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  #profile [data-page=profile] {
+    padding: 15px 0;
+  }
+  #profile [data-page=profile] .profile-section {
+    text-align: center;
+  }
+  #profile [data-page=profile] .profile-section .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+  #profile [data-page=profile] .profile-section .username {
+    font-size: 18px;
+    margin-top: 4px;
+  }
+  #profile [data-page=profile] .profile-section .position {
+    font-size: 16px;
+  }
+  #profile [data-page=profile] #navigation {
+    margin: 15px 0;
+    padding: 5px 0;
+  }
+  #profile [data-page=profile] #navigation .navbar-button {
+    margin: 5px 0;
+    padding: 3px 4px;
+  }
+  #profile [data-page=profile] #navigation .navbar-button .nav-name {
+    font-size: 15px;
+  }
+  #profile [data-page=profile] #navigation .navbar-button .fas {
+    font-size: 15px;
+  }
+  #profile [data-page=profile] #profile-buttons {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #profile [data-page=profile] #profile-buttons .moreButton {
+    font-size: 14px;
+    width: 75%;
+    border-radius: 25px;
+  }
+  #main section[data-page=about] #about-section-container {
+    width: 100%;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-left .user-image {
+    width: 220px;
+    height: 100%;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .title-about {
+    font-size: 25px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .description-about {
+    font-size: 15px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .subtitle-about {
+    font-size: 20px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about {
+    margin-top: 8px;
+  }
+  #main section[data-page=about] #about-section-container .about-page-wrapper .about-column-right .icons-buttons-about .icon-button {
+    font-size: 15px;
+  }
+  #main section[data-page=about] #education-section-container {
+    margin-top: 30px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .fas.fa-graduation-cap {
+    font-size: 25px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .education-year {
+    font-size: 18px;
+  }
+  #main section[data-page=about] #education-section-container .education-page-wrapper .education-name {
+    font-size: 15px;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper {
+    width: 250px;
+    margin: 5px;
+    padding: 15px;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper .fas {
+    font-size: 22px;
+    width: 44px;
+    height: 44px;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper .service-title {
+    font-size: 15px;
+  }
+  #main section[data-page=service] #service-section-container .service-page-wrapper .service-text {
+    font-size: 12px;
+  }
+  #main section[data-page=skill] #skill-area-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 160px));
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper {
+    margin: 13px;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper .skill-logo {
+    width: 80px;
+  }
+  #main section[data-page=skill] #skill-area-container .skill-page-wrapper .title-logo {
+    font-size: 14px;
+  }
+  #main section[data-page=skill] #work-area-container {
+    margin-top: 35px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper {
+    margin: 5px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .fas.fa-briefcase {
+    font-size: 20px;
+    padding: 3px 15px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .work-year-title {
+    font-size: 16px;
+  }
+  #main section[data-page=skill] #work-area-container .work-page-wrapper .work-description {
+    font-size: 12px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper {
+    width: 300px;
+    margin: 6px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .thumbnail-container {
+    height: 160px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area {
+    padding: 7px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-title {
+    font-size: 20px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-desc {
+    font-size: 14px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button {
+    font-size: 15px;
+  }
+  #main section[data-page=project] #project-area-container .project-page-wrapper .project-text-area .project-readmore-button .fas.fa-arrow-right {
+    font-size: 14px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper {
+    width: 220px;
+    margin: 7px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .thumbnail-wrapper {
+    height: 130px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-title {
+    font-size: 18px;
+  }
+  #main section[data-page=blog] #blog-area-container .blog-page-wrapper .blog-text-area .blog-creator-name {
+    font-size: 14px;
+  }
+  #main section[data-page=contact] #contact-area-container {
+    font-size: 14px;
+    width: 75%;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form {
+    padding: 14px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form label {
+    font-size: 15px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form input {
+    padding: 5px;
+  }
+  #main section[data-page=contact] #contact-area-container .input-form button[type=submit] {
+    font-size: 15px;
+    width: 40%;
+    margin: 14px auto 0;
+    padding: 2px 0;
+  }
+  #main footer[data-page=footer] {
+    width: 100%;
+  }
+  #main footer[data-page=footer] #footer-area-container {
+    gap: 6px;
+    padding: 0;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box {
+    width: max-content;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .footer-title {
+    font-size: 16px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .link-box {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .link-box .link {
+    font-size: 14px;
+  }
+  #main footer[data-page=footer] #footer-area-container .footer-box .contact {
+    font-size: 14px;
+  }
+  #main footer[data-page=footer] .text {
+    font-size: 12px;
+    width: 82%;
+  }
+  #main footer[data-page=footer] .copyright {
+    font-size: 14px;
+    padding: 4px 0;
+  }
+  [data-page=error] .error-title {
+    font-size: 120px;
+  }
+  [data-page=error] .error-text {
+    width: 80%;
+    font-size: 12px;
+  }
+  [data-page=error] .back-page {
+    font-size: 15px;
+    width: 20%;
+    padding: 4px;
+  }
+}/*# sourceMappingURL=style.css.map */

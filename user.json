@@ -1,0 +1,54 @@
+{
+  "personal_information": {
+    "nama": "John Doe",
+    "address": "Street No. 123",
+    "phone": "+1 234-567-890",
+    "email": "johndoe@example.com"
+  },
+  "education": [
+    {
+      "level": "high school",
+      "institution": "your_high_school_name",
+      "major": "your_major",
+      "start": "20XX",
+      "complete": "20XX"
+    },
+    {
+      "level": "Bachelor",
+      "institution": "University ABC",
+      "major": "your_major",
+      "start": "20XX",
+      "complete": "20XX"
+    }
+  ],
+  "work_experience": [
+    {
+      "position": "Junior Programmer",
+      "company": "your_company",
+      "start": "20XX",
+      "complete": "20XX",
+      "description": "Responsible for software development."
+    },
+    {
+      "position": "Senior Programmer",
+      "company": "your_company",
+      "start": "20XX",
+      "complete": "20XX",
+      "description": "Lead development teams for critical projects."
+    }
+  ],
+  "ability": [
+    {
+      "category": "Programming Languages",
+      "list": ["C", "C++", "C#", "Python", "Java"]
+    },
+    {
+      "category": "Framework",
+      "list": ["React", "Vue", "Django"]
+    },
+    {
+      "category": "Language",
+      "list": ["English", "Japan", "Arabian"]
+    }
+  ]
+}

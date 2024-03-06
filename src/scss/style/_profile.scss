@@ -1,0 +1,109 @@
+#profile {
+  grid-area: main;
+
+  [data-page="profile"] {
+    padding: 17px 0;
+    background: map-get($map: $colors, $key: primarywhite);
+
+    .profile-section {
+      text-align: center;
+      &::after {
+        content: "";
+        display: block;
+        width: calc(100% - 15%);
+        height: 1.48px;
+        background: rgba($color: map-get($map: $colors,  $key: darkn), $alpha: 0.2);
+        margin: 10px auto;
+        border-radius: 25px;
+      }
+      .profile-picture {
+        width: $profile-picture-image;
+        height: $profile-picture-image;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .username {
+        font-size: map-get($map: $fontsize, $key: largr);
+        font-weight: map-get($map: $fontweight, $key: skinny);
+        text-transform: capitalize;
+      }
+      .position {
+        color: map-get($map: $colors, $key: primaryblue);
+        font-size: map-get($map: $fontsize, $key: med);
+        font-weight: map-get($map: $fontweight, $key: slim);
+        text-transform: capitalize;
+      }
+    }
+
+    #hamburger-menu {
+      display: none;
+    }
+
+    #navigation {
+      @include displays(flex, null, column, center, center);
+      padding: 5px 0;
+      
+      .navigation-buttons {
+        position: relative;
+        width: calc(100% - 10%);
+        margin: 5px 0;
+        padding: 3px 5px;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 15px;
+        &:hover {
+          color: map-get($map: $colors, $key: primarywhite);
+          background: linear-gradient(45deg, rgba($color: map-get($map: $colors, $key: secondblue), $alpha: 0.9), rgba($color: map-get($map: $colors, $key: primaryblue), $alpha: 0.9));
+        }
+        .navigation-name {
+          font-size: map-get($map: $fontsize, $key: sm);
+          font-weight: map-get($map: $fontweight, $key: slim);
+          text-transform: capitalize;
+        }
+        .fas {
+          position: absolute;
+          top: 0;
+          left: 4%;
+          @include displays(inline-flex, null, null, null, center);
+          height: 100%;
+        }
+      }
+    }
+
+    #profile-buttons {
+      width: 100%;
+      margin-top: 25px;
+
+      .moreButton {
+        position: relative;
+        display: block;
+        width: calc(100% - 35%);
+        text-transform: capitalize;
+        margin: 12px auto;
+        padding: 3px 0;
+        color: map-get($map: $colors, $key: primarywhite);
+        background: map-get($map: $colors, $key: primaryblue);
+        border-radius: 20px;
+        cursor: pointer;
+        &:hover {
+          color: map-get($map: $colors, $key: primarywhite);
+          background: linear-gradient(
+            45deg,
+            rgba($color: map-get($map: $colors, $key: secondblue), $alpha: 0.9),
+            rgba($color: map-get($map: $colors, $key: primaryblue), $alpha: 0.9)
+          );
+        }
+        .fas {
+          position: absolute;
+          top: 25%;
+          left: 10%;
+          font-size: map-get($map: $fontsize, $key: sm);
+        }
+        .button-title {
+          font-size: map-get($map: $fontsize, $key: sm);
+          font-weight: map-get($map: $fontweight, $key: slim);
+        }
+      }
+    }
+  }
+}

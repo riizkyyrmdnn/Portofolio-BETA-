@@ -1,0 +1,22 @@
+{
+  "name": "Portofolio Example",
+  "short_name": "Portofolio",
+  "description": "A portofolio example for programming",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9faff",
+  "theme_color": "#f0f4ff",
+  "icons": [
+    {
+      "src": "/Portofolio/img/Profile128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/Portofolio/img/Profile512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait"
+}

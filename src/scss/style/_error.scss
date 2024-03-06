@@ -1,0 +1,36 @@
+[data-page="error"] {
+  @include displays(flex, null, column, center, center);
+  text-align: center;
+  min-height: 100vh;
+  color: map-get($map: $colors, $key: primarywhite);
+  background: map-get($map: $colors, $key: darkn);
+
+  .error-title {
+    font-size: calc(map-get($map: $fontsize, $key: xx-largr) + 100px);
+    font-weight: map-get($map: $fontweight, $key: thickn);
+    
+    #red {
+      color: #ff0000;
+      font-weight: map-get($map: $fontweight, $key: skinny);
+    }
+  }
+  .error-text {
+    width: calc(100% - 25%);
+    font-size: map-get($map: $fontsize, $key: sm);
+  }
+  .back-page {
+    font-size: map-get($map: $fontsize, $key: med);
+    font-weight: map-get($map: $fontweight, $key: slim);
+    text-transform: capitalize;
+    width: calc(100% - 83%);
+    margin-top: 25px;
+    padding: 4px 0;
+    color: map-get($map: $colors, $key: primarywhite);
+    background: map-get($map: $colors, $key: primaryblue);
+    border-radius: 25px;
+    cursor: pointer;
+    &:hover {
+      background: darken(map-get($map: $colors, $key: primaryblue), $amount: 5);
+    }
+  }
+}
