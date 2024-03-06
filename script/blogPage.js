@@ -1,6 +1,6 @@
 const blogList = [
   {
-    thumbnail: "../img/BlogImage1.jpg",
+    thumbnail: "img/BlogImage1.jpg",
     title: "Lorem ipsum dolor sit amet adipisicing elit.",
     link: "",
   },
@@ -10,7 +10,7 @@ const blogList = [
     link: "",
   },
   {
-    thumbnail: "/img/BlogImage3.jpg",
+    thumbnail: "img/BlogImage3.jpg",
     title: "Lorem ipsum dolor sit amet adipisicing elit.",
     link: "",
   },
