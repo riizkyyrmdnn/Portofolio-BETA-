@@ -8,12 +8,12 @@
   "theme_color": "#f0f4ff",
   "icons": [
     {
-      "src": "/Portofolio/img/Profile128.png",
+      "src": "img/Profile128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/Portofolio/img/Profile512.png",
+      "src": "img/Profile512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
